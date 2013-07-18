@@ -158,7 +158,9 @@ public class ValidatePanel extends JPanel implements ActionListener {
 
 			}
 			for (int i = 0; i < errors; i++) {
-				print(document.getError(i).toString());
+				String[] p= document.getError(i).toString().split("excerpt",2);
+					String[] q= document.getError(i).toString().split("message",2);
+				print(p[0]+" "+ q[1]);
 
 			}
 		}
